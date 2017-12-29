@@ -1,0 +1,123 @@
+<footer class="main-footer">
+	<div class="container clearfix">
+		<div class="f-bg"><svg class="signal-i"><use xlink:href="#signal"></use></svg></div>
+		<div class="row">
+			<div class="col-lg-2">
+				<a href="/" class="logo"><svg class="logo-i"><use xlink:href="#logo-f"></use></svg></a>
+			</div>
+			<div class="col-lg-4 offset-lg-2">
+				<div class="f-nav">
+					<a href="/">Компания</a>
+					<a href="/">Продукция</a>
+					<a href="/">Доставка и оплата</a>
+					<a href="/">Статьи</a>
+					<a href="/">Контакты</a>
+				</div>
+			</div>
+			<div class="col-lg-4">
+				<div class="contact-b">
+					<a href="tel:84957289099" class="tel"><svg class="call-i"><use xlink:href="#call"></use></svg>8 (495) 728-90-99</a>
+					<a href="mailto:info@krsystems.ru" class="email">info@krsystems.ru</a>
+					<div class="soc">
+						<a href="/" class="vk"><svg class="soc-i vk-i"><use xlink:href="#vk"></use></svg></a>
+						<a href="/" class="instagram"><svg class="soc-i instagram-i"><use xlink:href="#instagram"></use></svg></a>
+						<a href="/" class="fb"><svg class="soc-i fb-i"><use xlink:href="#fb"></use></svg></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="copyright">
+			<div class="row">
+				<div class="col-lg-4">
+					<div class="copyright-text">2017 © ООО "КР Системы"<br>
+					Все права защищены</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="t-soc">
+						<a href="/" class="viber"><svg class="t-soc-i"><use xlink:href="#viber"></use></svg></a>
+						<a href="/" class="telegram"><svg class="t-soc-i"><use xlink:href="#telegram"></use></svg></a>
+						<a href="/" class="whatsapp"><svg class="t-soc-i"><use xlink:href="#whatsapp"></use></svg></a>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="developer">Сайт разработан в студии <a href="brandstore.ru">Brandstore</a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+</div>
+
+<!-- Modals -->
+
+<!-- Modal -->
+
+<div class="modal fade" id="success-modal" tabindex="-1" role="dialog" aria-labelledby="success-modal" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true"><svg class="close-i"><use xlink:href="#close"></use></svg></span>
+			</button>
+			<div class="modal-header">
+				<h5 class="modal-title" id="success-modal-title">Сообщение отправлено</h5>
+				<p class="modal-subtitle">Мы скоро с вами свяжемся</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="callback-modal" tabindex="-1" role="dialog" aria-labelledby="callback-modal" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<button type="button" class="close-btn close-btn__light" data-dismiss="modal">&nbsp;</button>
+			<div class="modal-header">
+				<h5 class="modal-title" id="callback-modal-title">Заказать звонок</h5>
+			</div>
+			<div class="modal-body">
+				<form action="#" class="contact-form">
+					<div class="form-group">
+						<label>Представьтесь пожалуйста</label>
+						<input type="text" name="name">
+					</div>
+					<div class="form-group">
+						<label>Введите ваш номер</label>
+						<input type="tel" name="phone" required>
+					</div>
+					<div class="form-group">
+						<label>Введите ваш e-mail</label>
+						<input type="email" name="email">
+					</div>
+					<div class="form-group">
+						<label>Введите ваше сообщение</label>
+						<textarea name="message">Сообщение</textarea>
+					</div>
+					<div class="form-group">
+						<button type="submit" class="btn btn-submit">Отправить <svg class="send-mail"><use xlink:href="#send-mail"></use></svg></button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<link rel="stylesheet" href="css/main.min.css">
+<script>
+	function initMap() {
+		var uluru = {lat: 55.9258242, lng: 37.7635420};
+		var map = new google.maps.Map(document.getElementById('map'), {
+			zoom: 16,
+			center: uluru
+		});
+		var marker = new google.maps.Marker({
+			position: uluru,
+			map: map,
+			icon: 'img/pin.png'
+		});
+	}
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-Vpn2zdSxFP7nbacmmWyGF6EethavKGI&callback=initMap"></script>
+<script src="js/scripts.min.js"></script>
+
+</body>
+</html>
