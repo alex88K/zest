@@ -4,82 +4,69 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
-	.contact-b
-		padding-top: 35px
-		.contact-data
+	.btn
+		max-width: 260px
+		white-space: pre-wrap
+
+	.delivery-list li a span
+		font-size: 15px
+	
+	.cooperation-list
+		margin: 50px 0 30px 0
+		li
+			margin-bottom: 40px
+		&:after
 			display: none
-		.contact-data:first-child,
-		.contact-data:last-child
-			display: block	
+	
+	.fulfillment-list
+		margin-top: -10px
+		li
+			width: 100%
+			margin-bottom: 2px
+			background: linear-gradient(to top, rgba(11,63,28,.8) 0%,rgba(8,156,74,.8) 100%)
+			&:hover
+			   background: linear-gradient(to top, rgba(11,63,28,1) 0%,rgba(8,156,74,1) 100%)
+			a
+				height: 55px
+				span
+					line-height: 1.2
 
-	.card
-		.btn-group
-			flex-wrap: wrap
-			.btn
-				margin-bottom: .5em
-		.card-body
-			padding: 12px 20px 130px 20px
+	.main-footer
+		.contact-b
+			display: block
+			margin-bottom: 12px
+			padding-left: 0
 
-	.stages-list
-		div[class^=col-]:first-child
-			.stages-item:before
-				width: 20px
-		div[class^=col-]:last-child
-			.stages-item:after
-				width: 20px
-		.stages-item
-			&:after
-				right: -35px
-				width: 70px
-			.stages-icon:before
-				right: 35px
+	.copyright
+		margin-top: 20px
 
-	.feedback
-		&-text
-			margin: 28px 0 20px 0
-		.contact-form
-			margin: 0
-			input
-				width: 100%
-			input[type="submit"]
-				padding: 15px
-
-	.partners
-		.slick-list
-			margin: 0
-		&-slide
-			margin: 0
-			img
-				max-width: 80%
-
-	.product-slider
-		width: 280px
-		height: 270px
-		&-nav
-			margin-left: 10px
-
-	.product-card-head
-		padding: 40px 40px 20px 40px
+	.soc
+		margin-bottom: 25px
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
-	.logo
-		margin-top: 16px
-		img
-			max-width: 210px
+	.city-select
+		top: 20px
+		&-title
+			display: block
+
+	.signin
+		z-index: 10
+		position: absolute
+		top: 104px
+		left: 50%
+		transform: translateX(-50%)
+
+	.top-line
+		.contact-b
+			position: relative
+			top: 25px
+			left: 0
+			text-align: right
 
 	.navbar
 		position: static
-		&-nav
-			padding-top: 70px
-
-	.navbar.active
-		.close-btn
-			z-index: 1200
-			position: fixed
-			display: block
-			top: 30px
-			right: 30px
+		height: 44px
 
 	.navbar-expand-lg 
 		& > .container
@@ -94,396 +81,218 @@
 		width: 100%
 		height: 100%
 		overflow-y: auto
-		
-	body.nav-opened:after
-		z-index: 1000
-		opacity: 1
-
-	.navbar-nav
-		text-align: center
-		.nav-item
-			padding: 0
-			border-bottom: 1px solid rgba(124,124,124,.35)
-			&:after
-				display: none
-		.nav-link
-			font-size: 18px
-			color: #fff
-			&:hover,
-			&:focus,
-			&:active
-				color: #eee
-			.nav-arrow-i
-				fill: #fff
-
-	.dropdown-item
-		display: block
-		color: #fff
-		font-weight: 400
-		&:hover,
-		&:focus,
-		&:active
-			color: #eee
-
-	.dropdown-menu
-		padding-top: 0
-		background-image: none
-		box-shadow: none
-		background-color: transparent
-		columns: 1
-		text-align: center
-
-	.card
-		.card-body
-			padding: 12px 20px 100px 20px
-		.btn-group
-			justify-content: flex-start
-			.btn
-				margin-right: 1em
 
 	.promo
 		.slide-text
 			padding-left: 0
+		.contact-form-b
+			margin-top: 0
+			.form-title
+				font-size: 20px
+			.form-group
+				margin-bottom: 30px
 
-	.stages-list
-		div[class^=col-]:first-child
-			.stages-item:before
-				width: 10px
-				left: 5px
-		div[class^=col-]:last-child
-			.stages-item:after
-				width: 10px
-				right: 5px
-		.stages-item
-			&:after
-				right: -15px
-				width: 30px
-			.stages-icon:before
-				right: 5px
+	.pagingInfo
+		left: inherit
+		right: 15px
 
-	.feedback
-		&-text
-			margin: 0px 0 20px 0
+	.logistic-forms
+		top: -20px
+		margin-bottom: 10px
 
-	.partners
-		.slick-list
-			margin: 0
-		&-slider,
-		&-slide
-			height: 100px
-		&-slide
-			max-width: 160px
-			margin: 0
-			line-height: 100px
-			img
-				max-width: 60%
-				max-height: 60px
+	.delivery-form
+		margin-bottom: 18px
+		.form-group input
+			width: 90%
 
-	.faq .section-content
-		padding-left: 0
+	.delivery-list
+		li
+			float: none
+			width: 100%
+			height: 50px
+			a
+				height: auto
+				span
+					position: static
+					transform: none
+					line-height: 50px
+			&:hover
+				margin-top: 0
+		.building-i,
+		.twobuilding-i,
+		.agreement-i,
+		.earth2-i
+			right: 5% 
+		.russia-i
+			right: 5%
+			height: 35px
+			background-size: contain
 
-	.product-card-head
-		padding: 40px 13% 30px 13%
+	.logistic-i
+		width: 60px
+		height: 45px
 
-	.product-slider
-		width: 70%
-
-	.product-card-body
-		padding: 0 25px 20px 25px
+	.weare-list 
+		display: flex
+		flex-direction: row
+		flex-wrap: wrap
+		justify-content: center
+		li
+			float: none
+			width: 33%
+			margin-bottom: 12px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
-	.promo
-		.promo-slider,
-		.promo-slide
-			height: 425px
+	/**/ 
 		
 @media only screen and (max-width : 767px)
+	.article h1,
+	.section-title
+		font-size: 30px
+
+	.section-header
+		margin-bottom: 20px
+
+	p
+		font-size: 16px
+
 	.container
 		max-width: 100%
 
-	.catalog
-		.card-body
-			padding: 12px 0 90px 0
-		.card
-			max-width: 260px
-			.btn-group
-				justify-content: space-between
-				.btn
-					margin-right: 0
-		div[class^=col-]
-			&:nth-child(even) .card
-				margin: 0 auto 0 0
-			&:nth-child(odd) .card
-				margin: 0 0 0 auto
+	.top-line .contact-b
+		top: 32px
+		a
+			font-size: 18px
 
-	.advantages-list
-		margin: 40px 0 0 0
-		.advantages-item
-			margin-bottom: 30px
-
-	.contact-b 
-		padding-top: 15px
-		.contact-data
-			margin-right: 40px
-			&:last-child
-				margin-right: 0
-		.email
-			display: none
-		.soc
-			margin-top: 10px
-			margin-left: 0 !important
-		.soc-item + .soc-item
-			margin-left: 10px
-
-	.stages-list
-		margin-top: 15px
-		div[class^=col-]:first-child
-			.stages-item:before
-				width: 110px
-				left: -55px
-		div[class^=col-]:last-child
-			.stages-item:after
-				width: 110px
-				right: -55px
-		.stages-item-text
-			&:after
-				left: 170px
-		.stages-item
-			margin-bottom: 30px
-			&:after
-				right: -55px
-				width: 110px
-			.stages-icon:before
-				right: 24%
-		div[class^=col-]:nth-child(odd)
-			.stages-item:before
-			   content: ''
-			   position: absolute
-			   top: 65px
-			   left: -55px
-			   width: 110px
-			   height: 1px
-			   background-color: #e5e5e5
-
-	.feedback
-		.contact-form
-			max-width: 340px
-			padding: 22px 25px 10px 25px
-			.btn
-				font-size: 14px
-
-	.top-line
-		height: 75px
-
-	.logo
-		margin-top: 15px
-		margin-right: 0
-		img
-			max-width: 155px
+	.promo-slider
+		height: 700px
+		.promo-slide
+			height: 700px
 
 	.promo
 		.h1
-			font-size: 30px
-		ul
-			li
-				font-size: 12px
-				&:before
-					top: 7px
-				&:after
-					top: 3px
+			font-size: 34px
+		.slide-wrap
+			padding-top: 40px
+		.container,
+		.row
+			height: 100%
+		p
+			line-height: 1.2
+		.contact-form-b
+			width: 100%
+			margin-top: 20px
+			padding: 30px 32px 0 32px
+			.form-group
+				float: left
+				width: 50%
+				margin-bottom: 10px
+				&:first-child
+					width: calc(50% - 10px)
+					margin-right: 10px
+				&:nth-child(2)
+					width: calc(50% - 10px)
+					margin-left: 10px
+				&:last-child
+					width: 100%
+			.form-title
+				font-size: 24px
+
+	.pagingInfo
+		bottom: 290px
+
+	.search-wrap
+		.search-form
+			width: 100%
+			input
+				width: 100%
+				border-radius: 0
 
 	.main-footer
 		.fleft,
 		.fright
-			max-width: 150px
 			font-size: 10px
-		.developer
-			margin-top: 7px
-
-	.contacts-row
-		div[class^="col-"]
-			text-align: center !important
-			.contacts-where i
-				margin: 12px auto 0 auto !important
 
 	.breadcrumb
 		margin-bottom: 10px
 
-	.product-card-body
-		padding: 0 25px 25px 25px
+	.weare-list 
+		display: flex
+		flex-direction: row
+		flex-wrap: wrap
+		justify-content: center
+		li
+			float: none
+			width: 33%
+			margin-bottom: 12px
+			font-size: 14px
 
-	.product-slider
-		width: 70%
-		&-item
-			img
-				margin: 0
+		.weare-num
+			font-size: 34px
 
-	.product-card-head
-		padding: 40px 10% 30px 10%
+	.cooperation
+		padding: 40px 0 25px 0
+
+	.cooperation-list
+		margin: 40px 0
+		li
+			margin: 0 10px 20px 10px
+		&:after
+			display: none
+
+	.fulfillment .container
+		top: 50%
+
+	.fulfillment-list
+		margin-top: 0
+
+	.news-section
+		padding: 50px 0
+		.section-content .row
+			div[class^='col-']
+				margin-bottom: 20px
+
+	.aside
+		float: none
+		width: 100%
+
+	.content-inner 
+		.aside-b
+
+		.article
+			margin-left: 0
+	
+	.aside-nav
+		column-count: 2
+		column-width: 200px
 
 @media only screen and (max-width : 576px)
-	.logo
-		width: 49px
-		height: 47px
-		background-image: url(../img/logo_xs.png)
-		background-repeat: no-repeat
-		background-size: cover
-		img
-			display: none
+	.city-select
+		top: 10px
+		font-size: 13px
 
-	.catalog
-		.card-body
-			padding: 12px 0 90px 0
-		.card
-			max-width: 100%
-			.btn-group
-				justify-content: center
-				.btn
-					margin: 0 .5em
-			&-title
-				text-align: center
-			&-text
-				width: auto
-				margin: .5em auto
-			&-info
-				text-align: center
-		div[class^=col-]
-			&:nth-child(even) .card
-				margin: 0
-			&:nth-child(odd) .card
-				margin: 0
+	.top-line .contact-b
+		top: 55px
+		left: 158px
+		display: inline-block
+		text-align: left
 
-	.advantages-list
-		.advantages-item
+	.weare
+		height: 340px
+		&-num
+			font-size: 30px
+
+	.weare-list 
+		li
 			width: 50%
+			font-size: 12px
 
-	.stages-list
-		&:nth-child(2n + 1)
-			.stages-item:before
-			   content: ''
-			   position: absolute
-			   top: 57px
-			   left: -30px
-			   width: 60px
-			   height: 1px
-			   background-color: #e5e5e5
-		div[class^=col-]:nth-child(odd)
-			.stages-item:before
-			   display: none
-		.col-sm-6
-			width: 50%
-		div[class^=col-]:first-child
-			.stages-item:before
-				display: none				
-		div[class^=col-]:last-child
-			.stages-item:after
-				display: none
-		.stages-item
-			&:after
-				display: none
-			.stages-icon:before
-				right: 30%
-			svg
-				width: 38px
-				height: 38px
-		.stages-icon
-			&:before
-				width: 20px
-				height: 20px
-				font-size: 12px
-				line-height: 20px
-			&:after
-				width: 82px
-				height: 82px
-				margin-top: -41px
-				margin-left: -41px
-		.stages-item-text
-			padding-top: 0
-
-	.feedback
-		&-text
-			display: none
-		.contact-form
-			max-width: 100%
-			width: 100%
-			padding: 22px 40px 10px 40px
-			.title
-				font-size: 22px
-			.btn
-				font-size: 14px
-
-	.contact-b 
-		padding-top: 22px
-		.contact-city
-			font-size: 9.75px
-		a
-			font-size: 11.4px
-			.call-i
-				top: 1px
-				left: -18px
-				width: 14px
-				height: 14px
-		.contact-data
-			margin-right: 15px
-			&:last-child
-				margin-right: 0
-		.email
-			display: none
-		.soc
-			margin-top: 2px
-			margin-left: 0 !important
-		.soc-item + .soc-item
-			margin-left: 4px
-
-	.product-card-head
-		padding: 2px 10px 30px 10px
-	
-	.product-card-body
-		padding: 0 10px 25px 10px
-
-	.product-card
-		.container
-			padding: 10px
-
-	.product-slider
-		display: block
-		width: 300px
-		height: 240px
-
-	.product-slider-nav
-		display: block
-		width: 300px
-		margin: 0
-		padding: 0 35px
-		text-align: center
-		&-item
-			max-width: 70px
-			height: 50px
-		.slick-arrow
-			top: 50%
-			left: 0
-			width: 20px
-			height: 20px
-			margin-top: -14px
-			padding: 0
-			.arrow-i
-				width: 12px
-				height: 12px
-			&.slick-prev
-				top: 50%
-				left: 20px
-				.arrow-i
-					margin-top: -1px
-					transform: rotate(90deg)
-			&.slick-next
-				bottom: 50%
-				left: 100%
-				margin-left: -24px
-				.arrow-i
-					margin-top: -1px
-					margin-left: 2px
-					transform: rotate(-90deg)
+	.main-footer
+		.fright
+			float: none
+		.siteMap
+			margin-bottom: 30px
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
@@ -505,18 +314,30 @@
 	h6
 		font-size: 10px
 
-	.product-title
-		font-size: 18px
+	.top-line .contact-b
+		a
+			font-size: 15px
 
-	.product-table,
-	.product-choose,
-	.price-col-desc,
-	.product-price-col .btn
-		font-size: 10.5px
+	.promo
+		.h1
+			font-size: 28px
+		p
+			font-size: 20px
+		.contact-form-b
+			margin-top: 10px
+			.form-title
+				font-size: 20px
+				margin-bottom: 1em
+			.form-group
+				float: none
+				width: 100% !important
+				margin: 0 0 12px 0 !important
 
-	.product-price-col
-		max-width: 130px
-		margin-right: 5px
+	.pagingInfo
+		bottom: 340px
+
+	.f-col
+		width: 180px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)

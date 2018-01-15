@@ -1,5 +1,12 @@
 $(function() {
 
+	$(".navbar-collapse").mmenu({
+		wrappers: ["bootstrap4"],
+		navbar: {
+			title: ""
+		}
+   });
+
 	// Fancybox
 
 	$("[data-fancybox]").fancybox();
@@ -10,79 +17,39 @@ $(function() {
 	$("input[name='phone']").mask("+7 (999) 999-9999");
 
 
-	// NAV
+	// Parallax
 
-	$(".navbar-toggler").on("click", function() {
-		$(".navbar-toggler, .navbar").toggleClass("active");
-		$("body").toggleClass("nav-opened");
-	});
-
-	$(".navbar .close-btn").on("click", function() {
-		$(".navbar-toggler, .navbar").removeClass("active");
-		$("body").removeClass("nav-opened");
-		$(".navbar-collapse").removeClass("show");
-	});
+	var p = new Parallax('.parallax', {
+		offsetYBounds: 50,
+		intensity: 15,
+		center: 0.5,
+		safeHeight: 0.15
+	}).init();
 
 
 	// Sliders
 
-	$(".promo-slider").slick({
+	var $sliderStatus = $('.pagingInfo');
+	var $promoSlider = $('.promo-slider');
+
+	$promoSlider.on('init reInit afterChange', function(event, slick, currentSlide, nextSlide){
+		var i = (currentSlide ? currentSlide : 0) + 1;
+		$sliderStatus.html("<span class='current'>0" + i + "</span> " + "<span class='overall'>/0" + slick.slideCount + "</span>");
+	});
+
+	$promoSlider.slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
+		autoplay: true,
+  		autoplaySpeed: 15000,
 		infinity: true,
-		arrows: true,
-		nextArrow: $(".promo .slick-next"),
-		prevArrow: $(".promo .slick-prev"),
-		dots: true,
-		fade: true
-	});
-
-	$(".nproducts-slider").slick({
-		slidesToShow: 3,
-		slidesToScroll: 1,
-		infinity: true,
-		arrows: true,
-		nextArrow: $(".new-products .slick-next"),
-		prevArrow: $(".new-products .slick-prev"),
-		dots: false
-	});
-
-	$(".spec-products-slider").slick({
-		slidesToShow: 3,
-		slidesToScroll: 1,
-		infinity: true,
-		arrows: true,
-		nextArrow: $(".spec-products .slick-next"),
-		prevArrow: $(".spec-products .slick-prev"),
-		dots: false
-	});
-
-
-	$('.product-slider').slick({
-		slidesToShow: 1,
-		slidesToScroll: 1,
 		arrows: false,
 		dots: false,
 		fade: true,
-		asNavFor: '.product-slider-nav'
-	});
-
-	$('.product-slider-nav').slick({
-		slidesToShow: 3,
-		slidesToScroll: 1,
-		vertical: true,
-		asNavFor: '.product-slider',
-		nextArrow: '<button type="button" class="slick-next"><svg class="arrow-i arrow-next-i"><use xlink:href="#nav-arrow"></use></svg></button>',
-		prevArrow: '<button type="button" class="slick-prev"><svg class="arrow-i arrow-prev-i"><use xlink:href="#nav-arrow"></use></svg></button>',
-		dots: false,
-		centerMode: false,
-		focusOnSelect: true,
-		arrows: true,
-		responsive: [
-		{
-			breakpoint: 576,
+		responsive: [{
+			breakpoint: 480,
 			settings: {
-				vertical: false,
+				adaptiveHeight: true
 			}
 		}]
 	});
@@ -90,49 +57,19 @@ $(function() {
 
 /*--Search form-----------------------*/
 
-	// $('.search-btn').on('click', function(e) {
-	// 	e.stopPropagation();
-	// 	$('.search-wrap').toggleClass('in-active')
-	// 		.find('.search-form .search-input').focus();
-	// });
-
-	// $(document).on('mouseup', function(e) {
-	// 	var search_pc = $('.nav .search-wrap');
-
-	// 	if ( !search_pc.is(e.target) && search_pc.has(e.target).length === 0 ) {
-	// 		search_pc.removeClass('in-active');
-	// 	}
-	// });
-
-	// $(document).on('click', function() {
-	// 	if (!$(event.target).closest('.search-wrap').length) {
-	// 		if ($(".search-wrap").is(":visible")) {
-	// 			$('.search-wrap').removeClass("in-active");
-	// 		}
-	// 	}
-	// });
-
-	$('.toggle').focusin(function() {
+	$('.search-wrap').on("click", function(event) {
+		event.stopPropagation();
 		$(this).addClass('active');
-		$('.search-form .search').addClass('animate');
 	});
 
-	$('.toggle').focusout(function() {
-		$(this).removeClass('active').val("");
-		$('.search-form .search').removeClass('animate');
+	$(window).on("click", function(event) {
+		if (!$(event.target).closest(".search-wrap").length) {
+			if ($(".search-wrap").hasClass("active")) {
+				$(".search-wrap").removeClass("active");
+			}
+		}
 	});
 
-});
-
-
-/*--AJAX Form submit--------------------*/
-
-$(document).on('af_complete', function(event,response) {
-	var form_id = response.form.parents('.modal').attr('id');
-	if (response.success) {
-		$('#'+form_id).modal('hide');
-		$('#success-modal').modal('show');
-	}
 });
 
 
@@ -142,7 +79,7 @@ $(document).on('af_complete', function(event,response) {
 	'use strict';
 
 	var file = 'img/sprite.svg',
-	revision = 1;
+	revision = 2;
 
 	if( !document.createElementNS || !document.createElementNS( 'http://www.w3.org/2000/svg', 'svg' ).createSVGRect )
 		return true;

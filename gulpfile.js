@@ -79,9 +79,12 @@ gulp.task('js:build', function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
 		'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
+		'node_modules/scroll-parallax/dist/Parallax.min.js',
 		'app/libs/fancybox/dist/jquery.fancybox.min.js',
 		'app/libs/maskedInput/maskedInput.min.js',
 		'app/libs/slick/slick.js',
+		'app/libs/jQuery-mmenu/jquery.mmenu.all.js',
+		'app/libs/jQuery-mmenu/jquery.mmenu.bootstrap4.js',
 		'app/js/common.js',
 		])
 	.pipe(concat('scripts.min.js'))
